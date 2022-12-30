@@ -21,6 +21,7 @@ exports.signUp = async (req, res) => {
       fullName: req.body.fullName,
       email: req.body.email,
       password: req.body.password,
+      isAdmin: req.body.isAdmin,
     });
 
     const msg = "Owner created successfully";

@@ -9,7 +9,7 @@ exports.sendMail = async (options) => {
       pass: process.env.EMAIL_PASSWORD,
     },
   });
-
+  
   const mailOptions = {
     from: "Hussein Jaafar",
     to: options.email,

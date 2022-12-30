@@ -9,18 +9,30 @@ const cartSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-    product: [
+    products: [
       {
-        type: Schema.Types.ObjectId,
-        ref: "Product",
+        productId: {
+          type: Schema.Types.ObjectId,
+          ref: "Product",
+        },
+        quantity: {
+          type: Number,
+          default: 1,
+        },
       },
     ],
-    quantity: [
-      {
-        type: Number,
-        default: "",
-      },
-    ],
+    // product: [
+    //   {
+    //     type: Schema.Types.ObjectId,
+    //     ref: "Product",
+    //   },
+    // ],
+    // quantity: [
+    //   {
+    //     type: Number,
+    //     default: "",
+    //   },
+    // ],
   },
   { timestamps: true }
 );

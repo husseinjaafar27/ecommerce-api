@@ -9,16 +9,16 @@ const orderSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-    product: [
+    products: [
       {
-        type: Schema.Types.ObjectId,
-        ref: "Product",
-      },
-    ],
-    quantity: [
-      {
-        type: Number,
-        default: "",
+        productId: {
+          type: Schema.Types.ObjectId,
+          ref: "Product",
+        },
+        quantity: {
+          type: Number,
+          default: 1,
+        },
       },
     ],
     totalPrice: {

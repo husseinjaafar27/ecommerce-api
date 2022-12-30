@@ -26,6 +26,10 @@ const ownerSchema = new mongoose.Schema(
       minLength: 8,
       maxLength: 20,
     },
+    isAdmin: {
+      type: Boolean,
+      default: false,
+    },
     passwordChangedAt: Date,
     passwordResetToken: String,
     passwordResetExpires: Date,
